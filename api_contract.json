@@ -1,0 +1,10 @@
+{
+  "auth": ["POST /v1/auth/register", "POST /v1/auth/login", "POST /v1/auth/refresh", "POST /v1/auth/logout"],
+  "servers": ["GET /v1/regions", "GET /v1/servers", "POST /v1/servers/{server_id}/join", "POST /v1/servers/{server_id}/leave"],
+  "characters": ["GET /v1/characters", "POST /v1/characters", "PATCH /v1/characters/{id}"],
+  "player": ["GET /v1/me", "GET /v1/me/inventory", "GET /v1/me/bank", "GET /v1/me/transactions"],
+  "world": ["GET /v1/world/state", "POST /v1/world/action", "POST /v1/world/server-transfer"],
+  "emergency": ["POST /v1/emergency/calls", "GET /v1/emergency/calls"],
+  "moderation": ["POST /v1/reports", "GET /v1/appeals"],
+  "security": ["server-authoritative state", "rate limiting", "input validation", "permission checks", "audit logs", "hashed passwords", "session rotation"]
+}

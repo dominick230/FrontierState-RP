@@ -1,0 +1,48 @@
+FRONTIER STATE RP — BUILD AN APK WITHOUT INSTALLING GODOT
+
+This project has been prepared for a cloud Android build. You do NOT need
+Godot or Unity on your Chromebook to compile the APK if you use GitHub Actions.
+
+WHAT THIS ADDS
+- Android export preset
+- Android package ID: com.frontierstaterp.game
+- ARM64 Android build target for modern phones
+- Landscape phone/tablet orientation
+- GitHub Actions workflow that builds the APK automatically
+
+EASIEST METHOD — GITHUB
+1. On your Chromebook, create or sign in to a GitHub account.
+2. Create a NEW repository. Example name: FrontierStateRP.
+3. Upload ALL files and folders from this project ZIP into the repository.
+   Make sure .github/workflows/android-apk.yml is included.
+4. Commit the files to the main branch.
+5. Open the repository's Actions tab.
+6. Select "Build Frontier State RP Android APK".
+7. If GitHub asks for permission to run workflows, allow it.
+8. Wait for the workflow to finish successfully.
+9. Open the completed workflow run.
+10. In Artifacts, download "FrontierStateRP-Android".
+11. Extract the downloaded artifact ZIP. It contains FrontierStateRP.apk.
+12. Move the APK to your Android phone and install it.
+
+IF YOU ONLY WANT TO RUN THE BUILD MANUALLY
+The workflow also supports "Run workflow" from the Actions tab. This is
+useful after making changes to the project.
+
+PHONE INSTALLATION
+Android may warn that the APK came from outside the Play Store. Only install
+an APK you built from your own repository/project. You may need to allow your
+browser/file manager to install unknown apps in Android settings.
+
+IMPORTANT LIMITATION
+The cloud workflow can compile this current prototype, but it does NOT turn
+this prototype into the finished Frontier State RP MMO. The project still
+needs production multiplayer servers, authentication/database services,
+server-authoritative economy/inventory/vehicle systems, voice/chat backend,
+anti-cheat, moderation infrastructure, and progressive load testing toward
+100/250/400/500/600/700 concurrent players. The original design specifically
+requires load testing before claiming 700-player support.
+
+The game design also requires ONE Frontier State map shared by multiple
+independent server instances, with regions used for network/server clusters,
+not as different maps.
